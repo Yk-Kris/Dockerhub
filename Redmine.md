@@ -9,9 +9,11 @@
 openssl genrsa -out ca.key 3072
 openssl req -new -x509 -days 3650 -key ca.key -out ca.pem
 ![图片](https://user-images.githubusercontent.com/85480356/177931824-3a41fa14-f098-4515-8b06-d4cedbeb1c03.png)
+
 openssl genrsa -out harbor.key  3072
 openssl req -new -key harbor.key -out harbor.csr
-![图片](https://user-images.githubusercontent.com/85480356/177931933-7878799c-c203-40e8-9dce-4b0bd641258f.png)
+![图片](https://user-images.githubusercontent.com/85480356/177934387-0e3643fc-dbc7-4ce5-a0ad-1ee5f2669b3b.png)
+
 openssl x509 -req -in harbor.csr -CA ca.pem -CAkey ca.key -CAcreateserial -out harbor.pem -days 3650
 ![图片](https://user-images.githubusercontent.com/85480356/177932028-ef0320b6-733c-4f80-b4bb-e52a04848332.png)
 
