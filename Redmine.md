@@ -58,12 +58,15 @@ yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 开启包转发功能、修改内核参数
 
 [root@ harbor~]# modprobe br_netfilter
+
 [root@ harbor~]# cat > /etc/sysctl.d/docker.conf <<EOF
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 net.ipv4.ip_forward = 1
 EOF
+                                                       
 [root@harbor ~]# sysctl -p /etc/sysctl.d/docker.conf
+                                                       
 重启docker
                                                       
                                                        
