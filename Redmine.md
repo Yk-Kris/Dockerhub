@@ -89,7 +89,9 @@ docker ps -a #所有的container即可访问
 ![图片](https://user-images.githubusercontent.com/85480356/177937624-316bc355-8b62-47e0-82b1-2968389be86c.png)
 
 修改/etc/docker/daemon.json 文件，添加dockerharbor 地址即可
+                                                       
 Eg:
+                                                       
 {
 "registry-mirrors": ["https://rsbud4vc.mirror.aliyuncs.com","https://registry.dockercn.com","https://docker.mirrors.ustc.edu.cn","https://dockerhub.azk8s.cn","http://hubmirror.c.163.com"],
 "insecure-registries": ["ip","harbor"]
