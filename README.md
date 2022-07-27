@@ -1,3 +1,10 @@
+install docker.sh 脚本使用方法： sh install_docekr.sh  docker-version <default aliyun-docker.repo>
+
+Docker_install.sh  该脚本采用传参的形式，直接sh执行即可
+
+
+
+
 私有Docker Harbor 搭建
 
 环境配置，docker harbor主机名设置为harbor，方便为了后续给harbor签发证书
